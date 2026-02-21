@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdeltwab M. Fakhry — Resume</title>
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Computer Modern Serif", "Latin Modern Roman", Georgia, serif;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #000;
+      background: #fff;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+    }
+
+    a {
+      color: #4169E1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 8pt;
+    }
+
+    header h1 {
+      font-size: 20pt;
+      font-weight: bold;
+      margin-bottom: 4pt;
+      color: #000;
+    }
+
+    .contact {
+      font-size: 10pt;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .contact i {
+      font-size: 9pt;
+    }
+
+    /* Sections */
+    section {
+      margin-top: 12pt;
+    }
+
+    section h2 {
+      font-size: 12pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5pt;
+      border-bottom: 1px solid #000;
+      padding-bottom: 2pt;
+      margin-bottom: 8pt;
+    }
+
+    /* Experience */
+    .experience-item, .education-item, .project-item {
+      margin-bottom: 8pt;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2pt;
+    }
+
+    .item-header .left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex: 1;
+    }
+
+    .item-header i {
+      font-size: 10pt;
+      color: #4169E1;
+    }
+
+    .item-header .company {
+      font-weight: bold;
+      font-size: 11pt;
+    }
+
+    .item-header .meta {
+      font-size: 9pt;
+      font-style: italic;
+    }
+
+    .item-header .location {
+      font-size: 10pt;
+    }
+
+    .item-subheader {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10pt;
+      font-style: italic;
+      margin-bottom: 4pt;
+    }
+
+    .experience-item ul, .project-item ul {
+      margin-left: 20pt;
+      margin-top: 4pt;
+    }
+
+    .experience-item li, .project-item li {
+      font-size: 10pt;
+      margin-bottom: 3pt;
+      line-height: 1.3;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 3pt;
+    }
+
+    .skill-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8pt;
+      font-size: 10pt;
+    }
+
+    .skill-row i {
+      font-size: 9pt;
+      color: #4169E1;
+      width: 12pt;
+    }
+
+    .skill-row .label {
+      font-weight: bold;
+      min-width: 80pt;
+    }
+
+    .skill-row .items {
+      font-size: 9pt;
+    }
+
+    .skill-row .items span:not(:last-child)::after {
+      content: " • ";
+    }
+
+    /* Projects */
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      gap: 6pt;
+      margin-bottom: 2pt;
+    }
+
+    .project-header i {
+      font-size: 10pt;
+      color: #4169E1;
+    }
+
+    .project-header .name {
+      font-weight: bold;
+      font-size: 11pt;
+    }
+
+    .project-header .tech {
+      font-size: 9pt;
+      font-style: italic;
+    }
+
+    .project-header .date {
+      font-size: 10pt;
+      font-style: italic;
+      margin-left: auto;
+    }
+
+    .project-desc {
+      font-size: 10pt;
+      font-style: italic;
+      margin-bottom: 2pt;
+    }
+
+    .project-type {
+      font-size: 9pt;
+      font-style: italic;
+      color: #555;
+    }
+
+    /* Activities */
+    .activity-item {
+      font-size: 10pt;
+      margin-bottom: 4pt;
+      margin-left: 20pt;
+      position: relative;
+    }
+
+    .activity-item::before {
+      content: "•";
+      position: absolute;
+      left: -12pt;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 20pt;
+      display: flex;
+      justify-content: space-between;
+      font-size: 7pt;
+      font-family: monospace;
+      color: #666;
+    }
+
+    footer a {
+      color: #666;
+    }
+
+    footer a:hover {
+      color: #4169E1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Abdeltwab M. Fakhry</h1>
+    <div class="contact">
+      <a href="mailto:work@abdeltwab.xyz"><i class="fas fa-envelope"></i> work@abdeltwab.xyz</a>
+      <a href="https://www.linkedin.com/in/abdeltwabmf"><i class="fab fa-linkedin"></i> abdeltwabmf</a>
+      <a href="https://github.com/AbdeltwabMF"><i class="fab fa-github"></i> abdeltwabmf</a>
+      <a href="https://abdeltwab.xyz"><i class="fas fa-globe"></i> abdeltwab.xyz</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="experience-item">
+      <div class="item-header">
+        <div class="left">
+          <i class="fas fa-briefcase"></i>
+          <a href="https://atomica.ai/" class="company">Atomica AI</a>
+          <span class="meta">Full-time | Remote</span>
+        </div>
+        <span class="location">Giza, Egypt</span>
+      </div>
+      <div class="item-subheader">
+        <span>Software Engineer III</span>
+        <span>Nov. 2022 – Present</span>
+      </div>
+      <ul>
+        <li>Overhauled DICOM segmentation app in a 2-person team — adopting msgpack, WebSocket, and Qt architecture; rewrote algorithms achieving 2x+ performance improvements — becoming the baseline for 4 apps.</li>
+        <li>Introduced features — internationalization, feature flags, backup system, and reusable UI components — later adopted across 5 apps.</li>
+        <li>Self-taught Flutter and FFI to integrate Dart with a C++ DLL backend, delivering the Carestream converter UI/UX.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <i class="fas fa-code"></i>
+        <span class="label">Languages</span>
+        <div class="items">
+          <span>C/C++</span><span>Python</span><span>Go</span><span>JavaScript</span><span>Solidity</span><span>Bash</span><span>QML</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <i class="fas fa-brain"></i>
+        <span class="label">Concepts</span>
+        <div class="items">
+          <span>OOP</span><span>Design Patterns</span><span>Algorithms & Data Structures</span><span>Agile/Scrum</span><span>Unit Testing</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <i class="fab fa-react"></i>
+        <span class="label">Technologies</span>
+        <div class="items">
+          <span>Qt</span><span>Flutter</span><span>Next.js</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <i class="fas fa-tools"></i>
+        <span class="label">Tools</span>
+        <div class="items">
+          <span>Linux</span><span>Git</span><span>CMake</span><span>Docker</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Projects</h2>
+
+    <div class="project-item">
+      <div class="project-header">
+        <i class="fas fa-bell"></i>
+        <a href="https://github.com/AbdeltwabMF/loc/releases/latest" class="name">Loc</a>
+        <span class="tech">| Flutter | Android</span>
+        <span class="date">Jan. 2023 – Present</span>
+      </div>
+      <div class="project-desc">Location-based reminder app for Android.</div>
+      <ul>
+        <li>Location-based reminders with custom geofences and audible arrival alerts; offline via OpenStreetMap with live location display.</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <i class="fas fa-cloud"></i>
+        <a href="https://devault.vercel.app/" class="name">Devault</a>
+        <span class="tech">| Next.js - Solidity - IPFS - Hardhat - Docker | dApp</span>
+        <span class="date">Apr. 2022 – Jul. 2022</span>
+      </div>
+      <div class="project-desc">Decentralized cloud storage with end-to-end encryption.</div>
+      <ul>
+        <li>Decentralized file storage on Ethereum built with Next.js and Solidity; applies client-side encryption, chunks and distributes files across IPFS, stores root hash in blockchain wallet, and reconstructs on retrieval.</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <i class="fas fa-mosque"></i>
+        <a href="https://github.com/AbdeltwabMF/next-prayer" class="name">Next Prayer</a>
+        <span class="tech">| C++ - CMake | CLI</span>
+        <span class="date">Sep. 2021 – Present</span>
+      </div>
+      <div class="project-desc">Islamic prayer times and Hijri calendar for Unix status bars.</div>
+      <ul>
+        <li>A C++ CLI tool for Unix status bars that locally computes a full year of prayer times using the PrayTimes algorithm, displays Hijri dates, and triggers adhan notifications.</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="https://github.com/AbdeltwabMF/gomeet" class="name">GoMeet</a>
+        <span class="tech">| Go | daemon</span>
+        <span class="date">2024 – Present</span>
+      </div>
+      <div class="project-desc">Calendar-driven meeting launcher for Windows, macOS, and Linux.</div>
+      <ul>
+        <li>Built a cross-platform Go daemon that reads local and Google Calendar events, extracts meeting URLs from event locations, and auto-launches scheduled meetings.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="education-item">
+      <div class="item-header">
+        <div class="left">
+          <i class="fas fa-university"></i>
+          <a href="https://eng-azhar.net/" class="company">Faculty of Engineering, Al-Azhar University</a>
+        </div>
+        <span class="location">Cairo, Egypt</span>
+      </div>
+      <div class="item-subheader">
+        <span>Bachelor of Science (BSc) in Computers and Systems Engineering.</span>
+        <span>Sep. 2017 – Aug. 2022</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Extracurricular Activities</h2>
+    <div class="activity-item">
+      Finalist at ACPC 2020 (Africa & Arab Collegiate Programming Championship).
+    </div>
+    <div class="activity-item">
+      Fixed issues across open-source codebases including NewPipe, CP-Algorithms, and BeefProject.
+    </div>
+  </section>
+
+  <footer>
+    <a href="abdeltwab_m_fakhry_resume.pdf" download>Download PDF</a>
+    <span>Last updated on <span id="date"></span></span>
+    <script>
+      document.getElementById('date').textContent = new Date().toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+    </script>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,263 @@
+\documentclass[letterpaper, 11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% --- packages for Icon --- %
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{fontawesome5}
+
+\pagestyle{fancy}
+
+% -- clear all header and footer fields -- %
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% -- Adjust margins -- %
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom\raggedright\setlength{\tabcolsep}{0in}
+
+% -- Sections formatting -- %
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+% -- Ensure that the generated PDF is machine readable/ATS parsable -- %
+\pdfgentounicode=1
+
+%% ----- Custom Commands Start ----- %%
+\newcommand{\education}[6] {
+	\vspace{-1pt}\item[]
+  \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		#1 \href{#2}{\textbf{\color{RoyalBlue}#3}} & #4 \\
+    \textit{\small #5} & \textit{\small #6} \\
+  \end{tabular*}
+  \vspace{-4pt}
+}
+
+\newcommand{\extracurricularactivity}[3] {
+	\vspace{1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		#1 & \href{#2}{\color{RoyalBlue}#3} \\
+  \end{tabular*}
+  \vspace{-4pt}
+}
+
+\newcommand{\experience}[7] {
+	\vspace{-1pt}\item[]
+  \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		#1 \href{#2}{\textbf{\color{RoyalBlue}#3}}
+		\textbar{} \textit{\footnotesize#4} & #5 \\
+		\textit{\small #6} & \textit{\small #7} \\
+  \end{tabular*}
+  \vspace{-8pt}
+}
+
+\newcommand{\subexperience}[1] {
+\item\small
+  {#1}
+  \vspace{-2pt}
+}
+
+\newcommand{\project}[7] {
+	\vspace{-1pt}\item[]
+  \begin{tabular*}{1\textwidth}[t]{ll@{\extracolsep{\fill}}r}
+    #1 \href{#4}{\textbf{\color{RoyalBlue}#2}}
+    \textbar{} \textit{\small#5} \textbar{ } & \textit{\footnotesize#7} & \textit{\small #3} \\
+    \vspace{-8pt}
+  \end{tabular*}
+  \textit{\small #6}
+  \vspace{-8pt}
+}
+
+\newcommand{\subproject}[1] {
+\item\small
+  {#1}
+  \vspace{-2pt}
+}
+
+\newcommand{\technicalskill}[3] {
+  \vspace{-1pt}
+	\item[]\small
+  #1 \textbf{#2: }{\footnotesize{#3}}
+  \vspace{-2pt}
+}
+
+\newcommand{\name}[2] {
+  \textbf{
+    \href{#1}{\Huge{#2}}
+  }
+  \vspace{-4pt}
+}
+
+\newcommand{\contact}[4] {
+  \begin{tabular}{lr}
+    {\href{#1}{\color{#3} #2 #4}}
+  \end{tabular}
+  \vspace{-4pt}
+}
+
+\newcommand{\bulletitem}[1] {{\tiny$\bullet$} #1}
+
+\renewcommand{\labelitemii}{$\circ$}
+%% ----- Custom Commands End ----- %%
+
+% ---- CV SECTIONS ---- %
+\begin{document}
+
+% ---- HEADING ---- %
+\begin{center}
+\textbf{\Huge{Abdeltwab M. Fakhry}}
+\vspace{-4pt}
+\end{center}
+
+\begin{center}
+  \small
+  \contact
+  {mailto:work@abdeltwab.xyz}
+  {\faIcon{envelope}}{RoyalBlue}{work@abdeltwab.xyz}\,
+  \contact
+  {https://www.linkedin.com/in/abdeltwabmf}
+  {\faIcon{linkedin}}{RoyalBlue}{abdeltwabmf}\,
+  \contact
+  {https://github.com/AbdeltwabMF}
+  {\faIcon{github}}{RoyalBlue}{abdeltwabmf}\,
+  \contact
+  {https://abdeltwab.xyz}
+  {\faIcon{globe}}{RoyalBlue}{abdeltwab.xyz}
+\end{center}\vspace{8pt}
+
+% ---- Experience ---- %
+\section{Experience}
+\begin{itemize}[leftmargin=0pt]
+  \experience
+	{\faIcon{briefcase}}
+	{https://atomica.ai/}{Atomica AI}{Full-time \textbar{} Remote}{Giza, Egypt}
+  {Software Engineer III}{Nov. 2022 $-$ Present}
+
+  \begin{itemize}
+    \subexperience
+		{Overhauled DICOM segmentation app in a 2-person team — adopting msgpack, WebSocket, and Qt architecture; rewrote algorithms achieving 2x+ performance improvements — becoming the baseline for 4 apps.}
+    \subexperience
+		{Introduced features — internationalization, feature flags, backup system, and reusable UI components — later adopted across 5 apps.}
+    \subexperience
+		{Self-taught Flutter and FFI to integrate Dart with a C++ DLL backend, delivering the Carestream converter UI/UX.}
+  \end{itemize}\vspace{-4pt}
+\end{itemize}
+
+% ---- Technical Skills ---- %
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0pt]
+  \technicalskill
+  {\faIcon{code}}{Languages}
+	{C/C++ \bulletitem{Python} \bulletitem{Go} \bulletitem{JavaScript} \bulletitem{Solidity} \bulletitem{Bash} \bulletitem{QML}}
+
+  \technicalskill
+  {\faIcon{brain}}{Concepts}
+	{OOP \bulletitem{Design Patterns} \bulletitem{Algorithms \& Data Structures} \bulletitem{Agile/Scrum} \bulletitem{Unit Testing}}
+
+  \technicalskill
+  {\faIcon{react}}{Technologies}
+	{Qt \bulletitem{Flutter} \bulletitem{Next.js}}
+
+  \technicalskill
+  {\faIcon{tools}}{Tools}
+  {Linux \bulletitem{Git} \bulletitem{CMake} \bulletitem{Docker}}
+\end{itemize}
+
+% ---- PROJECTS ---- %
+\section{Selected Projects}
+\begin{itemize}[leftmargin=0pt]
+  \project
+  {\faIcon{bell}}
+  {Loc}{Jan. 2023 $-$ Present}
+  {https://github.com/AbdeltwabMF/loc/releases/latest}{Flutter}
+  {Location-based reminder app for Android.}{Android}
+
+  \begin{itemize}
+    \subproject
+    {Location-based reminders with custom geofences and audible arrival alerts; offline via OpenStreetMap with live location display.}
+  \end{itemize}\vspace{-4pt}
+
+  \project
+  {\faIcon{cloud}}
+  {Devault}{Apr. 2022 $-$ Jul. 2022}
+  {https://devault.vercel.app/}{Next.js - Solidity - IPFS - Hardhat - Docker}
+  {Decentralized cloud storage with end-to-end encryption.}{dApp}
+
+  \begin{itemize}
+    \subproject
+    {Decentralized file storage on Ethereum built with Next.js and Solidity; applies client-side encryption, chunks and distributes files across IPFS, stores root hash in blockchain wallet, and reconstructs on retrieval.}
+  \end{itemize}\vspace{-4pt}
+
+  \project
+  {\faIcon{mosque}}
+  {Next Prayer}{Sep. 2021 $-$ Present}
+  {https://github.com/AbdeltwabMF/next-prayer}{C++ - CMake}
+  {Islamic prayer times and Hijri calendar for Unix status bars.}{CLI}
+
+  \begin{itemize}
+    \subproject
+    {A C++ CLI tool for Unix status bars that locally computes a full year of prayer times using the PrayTimes algorithm, displays Hijri dates, and triggers adhan notifications.}
+  \end{itemize}\vspace{-4pt}
+
+  \project
+  {\faIcon{calendar-alt}}
+  {GoMeet}{2024 $-$ Present}
+  {https://github.com/AbdeltwabMF/gomeet}{Go}
+  {Calendar-driven meeting launcher for Windows, macOS, and Linux.}{daemon}
+
+  \begin{itemize}
+    \subproject
+    {Built a cross-platform Go daemon that reads local and Google Calendar events, extracts meeting URLs from event locations, and auto-launches scheduled meetings.}
+  \end{itemize}\vspace{-4pt}
+\end{itemize}
+
+% ---- Education ---- %
+\section{Education}
+\begin{itemize}[leftmargin=0pt]
+  \education
+  {\faIcon{university}}
+	{https://eng-azhar.net/}
+  {Faculty of Engineering, Al-Azhar University}{ Cairo, Egypt}
+  {Bachelor of Science (BSc) in Computers and Systems Engineering.}{Sep. 2017 $-$ Aug. 2022}
+\end{itemize}
+
+% ---- Competitive Programming ---- %
+\section{Extracurricular Activities}
+\begin{itemize}[leftmargin=*]
+  \extracurricularactivity
+  {Finalist at ACPC 2020 (Africa \& Arab Collegiate Programming Championship).}
+  {}{}
+
+  \extracurricularactivity
+  {Fixed issues across open-source codebases including NewPipe, CP-Algorithms, and BeefProject.}
+  {}{}
+\end{itemize}
+
+\vfill
+\begin{flushright}
+	\texttt{\tiny 
+		\color{gray}
+		Last updated on \today
+	}
+\end{flushright}
+
+\end{document}
