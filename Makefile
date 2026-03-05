@@ -1,4 +1,5 @@
 TARGET = abdeltwab_m_fakhry_resume
+COMMIT_DATE := $(shell git log -1 --format=%cd --date=format:'%B %d, %Y')
 
 # ANSI colors for output
 RED    := \033[0;31m
@@ -15,6 +16,8 @@ all:
 	latexmk -pdf -output-directory=./ $(TARGET).tex
 	@printf "%b" "$(YELLOW)Generating preview...\n$(NC)"
 	pdftoppm -r 300 -png -singlefile $(TARGET).pdf assets/preview
+	@printf "%b" "$(YELLOW)Updating the date in index.html...\n$(NC)"
+	sed -i "s/Last updated on [^<]*/Last updated on ${COMMIT_DATE}/" index.html
 	@printf "%b" "$(GREEN)Done.\n$(NC)"
 
 clean:
