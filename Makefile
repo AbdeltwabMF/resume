@@ -1,4 +1,4 @@
-TARGET = abdeltwab_m_fakhry_resume
+TARGET = Abdeltwab_Fakhry_Resume
 COMMIT_DATE := $(shell git log -1 --format=%cd --date=format:'%B %d, %Y')
 
 # ANSI colors for output
